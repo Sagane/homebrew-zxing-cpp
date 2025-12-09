@@ -39,8 +39,7 @@ class ZxingCpp < Formula
 
   test do
     # Test 1: Verify headers are installed
-    assert_predicate include/"ZXing/ReadBarcode.h", :exist?,
-                     "ReadBarcode.h header should be installed"
+    assert_path_exists include/"ZXing/ReadBarcode.h"
 
     # Test 2: Compile a simple test program
     (testpath/"test.cpp").write <<~EOS
